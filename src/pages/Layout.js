@@ -7,7 +7,7 @@ const Layout = ()=>{
         <header>
             <nav className="navbar navbar-expand-md navbar-light">
                  <div className="container-fluid">
-                    <Link to="/" className="navbar-brand navbar-brand-right">
+                    <Link to="/" className="navbar-brand justify-content-md-center">
                         <img src={logoSrc} width="60px" height="60px" alt=""/>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
