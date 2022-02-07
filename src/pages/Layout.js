@@ -1,21 +1,27 @@
 import { Outlet, Link } from "react-router-dom";
+import "../css/menu.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
+import "../css/menu.css";
 import logoSrc from "../img/site-logo.svg";
+import store from "../img/store.png";
 const Layout = ()=>{
     return (
         <header>
-            <nav className="navbar navbar-expand-md navbar-light">
-                 <div className="container-fluid">
-                    <Link to="/" className="navbar-brand justify-content-md-center">
-                        <img src={logoSrc} width="60px" height="60px" alt=""/>
-                    </Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon "></span>
-                    </button>
-                 </div>
-                <div className="collapse navbar-collapse p-4" id="navbarCollapse">
-                    <ul className="navbar-nav  me-auto mb-2 mb-md-0">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light rounded" aria-label="Eleventh navbar example">
+            <div className="container-fluid">
+                <Link to="/" className="navbar-brand">
+                    <img src={logoSrc} width="60px" height="60px" alt=""/>
+                </Link>
+                <Link to="/" className="navbar-brand">
+                    <img src={store} width="60px" height="60px" alt=""/>
+                </Link>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                <div className="collapse navbar-collapse" id="navbarsExample09">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Home</Link>
                         </li>
@@ -23,13 +29,13 @@ const Layout = ()=>{
                             <Link className="nav-link" to="/Services">Services</Link>
                         </li>
                         <li className="nav-item">
-                        <Link className="nav-link" to="/About">About</Link>
+                            <Link className="nav-link" to="/About">About</Link>
                         </li>
-                </ul>
+                    </ul>
                 </div>
-                
-            </nav>
-            <Outlet/>
+            </div>
+        </nav>
+        <Outlet/>
         </header>
        
     );
