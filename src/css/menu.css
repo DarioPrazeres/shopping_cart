@@ -19,6 +19,14 @@
 .info{
     text-justify: auto;
 }
+footer{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-size: 16px;
+    height: 50px;
+}
 @media (max-width: 768px) {
     .banner, .banner-1{
         width: 100%;
