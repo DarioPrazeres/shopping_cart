@@ -12,7 +12,7 @@ const RouteSwicth = () =>{
                     <Route path="/" index element={<Home/>}/>
                     <Route path="/Services" element={<Services/>}/>
                     <Route path="/About" element={<About/>}/>
-                    <Route path="*" element={<NoPage/>}/>
+                    <Route path="*" element={<Home/>}/>
                 </Route>
                 
             </Routes>
