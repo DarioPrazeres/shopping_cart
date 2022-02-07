@@ -10,7 +10,6 @@ const RouteSwicth = () =>{
                 <Route path="/" element={<Layout/>}>
                     <Route path="/" index element={<Home/>}/>
                     <Route path="/Services" element={<Services/>}/>
-                    <Route path="/About" element={<About/>}/>
                     <Route path="*" element={<Home/>}/>
                 </Route>                
             </Routes>
