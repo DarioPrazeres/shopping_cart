@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./Home";
 import Services from "./Services";
-import About from "./About";
 import Layout from "./Layout";
 const RouteSwicth = () =>{
     return (
