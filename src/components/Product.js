@@ -3,9 +3,9 @@ import "../css/menu.css";
 function Product(props){
     return (
         <div className="product">
-            <img src={props.srcImage} alt=""/>
-            <h5>{props.nameProduct}</h5>
-            <h5>{props.priceProduct}</h5>
+            <img src={props.product.srcImage} alt=""/>
+            <h5>{props.product.nameProduct}</h5>
+            <h5>{props.product.priceProduct}</h5>
         </div>
     );
 }

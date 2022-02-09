@@ -3,6 +3,7 @@ import redDress from "../img/redDress.jpg";
 import BannerColection from "../components/BannerColection";
 import "../css/menu.css";
 import { colections } from "../components/Datta";
+import Product from "../components/Product";
 const Services = ()=>{
     return (
         <div>
@@ -14,7 +15,7 @@ const Services = ()=>{
                 <div className="cl">
                     <BannerColection src={redDress}/>
                     {colections[0].map((colection, i)=>{
-                        return <p key={i}>{colection.name}</p>
+                        return <Product key={i} product={colection}/>
                     })
                     }
                 </div>              
