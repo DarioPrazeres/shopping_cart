@@ -2,6 +2,11 @@ import BannerColection from "../components/BannerColection";
 import "../css/menu.css";
 import { colections, redDress, blackStyle } from "../components/Datta";
 import Product from "../components/Product";
+import sold from "../components/Cart"
+function showDatta(array){
+    console.log(array);
+    sold.push(array);
+}
 const Services = ()=>{
     return (
         <div className="dp">
@@ -14,9 +19,9 @@ const Services = ()=>{
                    <div className="gridShow">
                         {colections[0].map((colection, i)=>{
                             return (
-                                    <div className="p-2">
-                                        <Product key={i} product={colection}/>
-                                        <button className="btn border">Add Cart</button>
+                                    <div key={i} className="p-2">
+                                        <Product  product={colection}/>
+                                        <button className="btn border" onClick={()=>showDatta(colections[0][i])}>Add Cart</button>
                                     </div>
                                 );
                             })
@@ -31,8 +36,8 @@ const Services = ()=>{
                    <div className="gridShow">
                         {colections[1].map((colection, c)=>{
                             return (
-                                    <div className="p-2">
-                                        <Product key={c} product={colection}/>
+                                    <div key={c} className="p-2">
+                                        <Product  product={colection}/>
                                         <button className="btn border">Add Cart</button>
                                     </div>
                                 );
