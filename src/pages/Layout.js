@@ -14,7 +14,7 @@ const Layout = ()=>{
                 </Link>
                 <Link to="/" className="navbar-brand">
                     <div className="bag">
-                       <h1 className="ty">0</h1>
+                       <h5 className="ty">0</h5>
                     </div>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">

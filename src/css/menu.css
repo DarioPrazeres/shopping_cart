@@ -52,6 +52,12 @@ footer{
 .cl{
     height: 700px;
 }
+.gridShow{
+   display: grid;
+   grid-template-columns: 30% 30% 30%;
+   grid-template-rows: 280px;
+   gap: 5px;
+}
 
 .product{
     display: flex;
