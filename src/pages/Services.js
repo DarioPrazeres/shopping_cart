@@ -1,13 +1,14 @@
 import BannerColection from "../components/BannerColection";
 import "../css/menu.css";
-import { colections, redDress, blackStyle } from "../components/Datta";
+
 import Product from "../components/Product";
-import sold from "../components/Cart"
 function showDatta(array){
     console.log(array);
-    sold.push(array);
 }
-const Services = ()=>{
+const Services = (props)=>{
+    const redDress = props.redDress
+    const blackStyle = props.blackStyle;
+    const colections = props.colections;
     return (
         <div className="dp">
             <div className="colection">
@@ -38,7 +39,7 @@ const Services = ()=>{
                             return (
                                     <div key={c} className="p-2">
                                         <Product  product={colection}/>
-                                        <button className="btn border">Add Cart</button>
+                                        <button className="btn border" onClick={()=>showDatta(colections[1][c])}>Add Cart</button>
                                     </div>
                                 );
                             })

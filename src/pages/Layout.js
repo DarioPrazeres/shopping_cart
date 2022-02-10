@@ -1,5 +1,4 @@
 import { Outlet, Link } from "react-router-dom";
-import React, { useContext } from "react";
 import "../css/menu.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
