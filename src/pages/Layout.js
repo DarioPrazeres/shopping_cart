@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
 import "../css/menu.css";
 import logoSrc from "../img/site-logo.svg";
-import sold from "../components/Cart";
 const Layout = ()=>{
     return (
         <header>
@@ -13,9 +12,9 @@ const Layout = ()=>{
                 <Link to="/" className="navbar-brand">
                     <img src={logoSrc} width="60px" height="60px" alt=""/>
                 </Link>
-                <Link to="/" className="navbar-brand">
+                <Link to="/Cart" className="navbar-brand">
                     <div className="bag">
-                       <h5 className="ty">{`${sold.length}`}</h5>
+                       <h5 className="ty">0</h5>
                     </div>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,12 +1,7 @@
-import React, {useContext, createContext} from "react";
-const Length = createContext();
-const sold=[];
+import React from "react";
 function Cart(){
     return(
-        <Length.Provider value={sold}>
-            <h1>{sold.length}</h1>
-        </Length.Provider>
+        <h1>I am Cart</h1>
     );
 }
 export default Cart;
-export {Length, sold};

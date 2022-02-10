@@ -3,6 +3,7 @@ import Home from "./Home";
 import Services from "./Services";
 import Layout from "./Layout";
 import { colections, redDress, blackStyle } from "../components/Datta";
+import Cart from "../components/Cart";
 const RouteSwicth = () =>{
     return (
         <BrowserRouter>
@@ -11,6 +12,7 @@ const RouteSwicth = () =>{
                     <Route path="/" index element={<Home/>}/>
                     <Route path="/Services" element={<Services redDress={redDress} blackStyle={blackStyle} colections={colections}/>}/>
                     <Route path="*" element={<Home/>}/>
+                    <Route path="/Cart" element={<Cart/>}/>
                 </Route>                
             </Routes>
         </BrowserRouter>
