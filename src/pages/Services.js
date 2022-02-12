@@ -2,13 +2,15 @@ import BannerColection from "../components/BannerColection";
 import "../css/menu.css";
 
 import Product from "../components/Product";
-function showDatta(array){
-    console.log(array);
-}
+
 const Services = (props)=>{
     const redDress = props.redDress
     const blackStyle = props.blackStyle;
     const colections = props.colections;
+    function showDatta(array){
+        console.log(array);
+        props.upDate(array);
+    }
     return (
         <div className="dp">
             <div className="colection">
