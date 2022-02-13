@@ -1,14 +1,12 @@
 import React from "react";
 import Product from "./Product";
+import "../css/menu.css";
 function Cart(props){
-    const colections= props.allProducts
-    const qtd = Array(colections.length);
-    for(let i=0; i<qtd.length; i++)qtd[i]=1
-    function changeNumber(index, event){
-        var value = event.target.value;
-        qtd[index] = value;
-        console.log(qtd[index]);
+    const colections= props.allProducts;
+    function upDateQtd(){
+
     }
+    //props.upDate(array, index);
     return(
         <>
             <h1>I am Cart</h1>
@@ -17,12 +15,15 @@ function Cart(props){
                    <div className="gridShow">
                         {colections.map((colection, i)=>{
                             return (
-                                    <div key={i} className="p-2">
+                                    <div key={i} className="p-2 show">
                                         <Product  product={colection}/>
-                                            <label>Qtd:</label>
-                                            <input type="number" className="form-control" placeholder="Your Name" onChange={()=>changeNumber(i)} value={qtd[i]} name='' id="name"/>
-                                            <h6>Total: {Number(qtd[i])* Number.parseInt(colection.price)}</h6>
-                                        <button className="btn border">Buy Now</button>
+                                        <h6>Total: {colection.qtd * colection.price}</h6>
+                                        <div className="d-flex justify-content-center mb-1 show">
+                                            <button onClick={()=>upDateQtd(colection.qtd--, i)} className="btn border">-</button>
+                                            <h6 className="p-2">{colection.qtd}</h6>
+                                            <button onClick={()=>upDateQtd(colection.qtd++, i)} className="btn border">+</button>
+                                        </div>
+                                        <button className="btn border bn">Buy Now</button>
                                     </div>
                                 );
                             })

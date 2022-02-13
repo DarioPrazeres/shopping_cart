@@ -7,9 +7,10 @@ const Services = (props)=>{
     const redDress = props.redDress
     const blackStyle = props.blackStyle;
     const colections = props.colections;
-    function showDatta(array){
+    function showDatta(array, index){
         console.log(array);
-        props.upDate(array);
+        array.qtd++;
+        props.upDate(array, index);
     }
     return (
         <div className="dp">
@@ -24,7 +25,7 @@ const Services = (props)=>{
                             return (
                                     <div key={i} className="p-2">
                                         <Product  product={colection}/>
-                                        <button className="btn border" onClick={()=>showDatta(colections[0][i])}>Add Cart</button>
+                                        <button className="btn border" onClick={()=>showDatta(colections[0][i], i)}>Add Cart</button>
                                     </div>
                                 );
                             })
@@ -41,7 +42,7 @@ const Services = (props)=>{
                             return (
                                     <div key={c} className="p-2">
                                         <Product  product={colection}/>
-                                        <button className="btn border" onClick={()=>showDatta(colections[1][c])}>Add Cart</button>
+                                        <button className="btn border" onClick={()=>showDatta(colections[1][c], c)}>Add Cart</button>
                                     </div>
                                 );
                             })

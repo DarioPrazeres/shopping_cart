@@ -7,9 +7,14 @@ import { colections, redDress, blackStyle } from "../components/Datta";
 import Cart from "../components/Cart";
 
 const RouteSwicth = () =>{
-    const [products, setProducts] = useState([]);
-    const upDateCart = (childDatta) =>{
-        setProducts(()=> products.concat(childDatta))
+    const products = [];
+    const upDateCart = (childDatta, index) =>{
+        if(childDatta.qtd === 1){
+          products.push(childDatta);  
+        }else{
+            products[index].qtd = childDatta.qtd;
+        }
+        
     }
     return (
         <BrowserRouter>
@@ -18,7 +23,7 @@ const RouteSwicth = () =>{
                     <Route path="/" index element={<Home/>}/>
                     <Route path="/Services" element={<Services redDress={redDress} blackStyle={blackStyle} colections={colections} upDate={upDateCart}/>}/>
                     <Route path="*" element={<Home/>}/>
-                    <Route path="/Cart" element={<Cart allProducts={products}/>}/>
+                    <Route path="/Cart" element={<Cart allProducts={products} upDate={upDateCart}/>}/>
                 </Route>                
             </Routes>
         </BrowserRouter>

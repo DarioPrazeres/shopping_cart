@@ -31,6 +31,12 @@ footer{
     text-decoration: none;
     color: black;
 }
+.bt_cart{
+    font-size: 20px;
+}
+.bn{
+    width: 80%;
+}
 .bag{
     background-image: url(../img/bag.png);
     background-size: cover;
@@ -39,6 +45,9 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.show{
+    text-align: center;
 }
 .ty{
     margin-top: 10px;
