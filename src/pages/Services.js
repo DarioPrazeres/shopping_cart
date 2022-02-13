@@ -10,7 +10,7 @@ const Services = (props)=>{
     function showDatta(array, index){
         console.log(array);
         array.qtd++;
-        props.upDate(array, index);
+        props.upDateProd(array, index);
     }
     return (
         <div className="dp">

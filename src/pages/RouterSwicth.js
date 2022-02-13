@@ -16,14 +16,18 @@ const RouteSwicth = () =>{
         }
         
     }
+    const upDateQtd = (childDatta, index) =>{
+        products[index].qtd = childDatta;  
+        console.log(products[index].qtd) 
+    }
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout nItem={products.length}/>}>
                     <Route path="/" index element={<Home/>}/>
-                    <Route path="/Services" element={<Services redDress={redDress} blackStyle={blackStyle} colections={colections} upDate={upDateCart}/>}/>
+                    <Route path="/Services" element={<Services redDress={redDress} blackStyle={blackStyle} colections={colections} upDateProd={upDateCart}/>}/>
                     <Route path="*" element={<Home/>}/>
-                    <Route path="/Cart" element={<Cart allProducts={products} upDate={upDateCart}/>}/>
+                    <Route path="/Cart" element={<Cart allProducts={products} upDate={upDateQtd}/>}/>
                 </Route>                
             </Routes>
         </BrowserRouter>
