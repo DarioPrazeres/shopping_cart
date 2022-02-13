@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./Home";
 import Services from "./Services";
@@ -13,13 +13,14 @@ const RouteSwicth = () =>{
           products.push(childDatta);  
         }else{
             products[index].qtd = childDatta.qtd;
-        }
-        
+        }        
     }
-    const upDateQtd = (childDatta, index) =>{
+    const upDateQtd = (childDatta, index) =>{       
         products[index].qtd = childDatta;  
         console.log(products[index].qtd) 
     }
+    useEffect(()=>{
+    }, [products]);
     return (
         <BrowserRouter>
             <Routes>
