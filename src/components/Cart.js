@@ -5,8 +5,6 @@ function Cart(props){
     //const [colections, setColections] = useState(props.allProducts);
     const colections = props.allProducts;
     const [count, setCount] = useState(0);
-    var updateDatta = 0;
-    var updateIndex = 0; 
     function upDateQtd(newDatta, index){
         console.log(newDatta);
         //props.upDate(newDatta, index);
@@ -25,7 +23,7 @@ function Cart(props){
                                         <Product  product={colection}/>
                                         <h6>Total: {colection.qtd * colection.price}</h6>
                                         <div className="d-flex justify-content-center mb-1 show">
-                                            <button onClick={()=>{setCount((c)=> c+1); updateDatta = colection.qtd++; updateIndex = i}} className="btn border">-</button>
+                                            <button onClick={()=>{setCount((c)=> c+1);}} className="btn border">-</button>
                                             <h6 className="p-2">{colection.qtd}</h6>
                                             <button onClick={()=>upDateQtd(colection.qtd+1, i)} className="btn border">+</button>
                                         </div>
