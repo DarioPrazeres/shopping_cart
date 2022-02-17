@@ -20,8 +20,8 @@ const RouteSwicth = () =>{
         console.log(dario.length)
    }, [dario]);
     const upDateQtd = (childDatta, index) =>{       
-        //products[index].qtd = childDatta;  
-        //console.log(products[index].qtd) 
+        products[index].qtd = childDatta;  
+        console.log(products[index].qtd) 
     }
     return (
         <BrowserRouter>
