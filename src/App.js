@@ -7,7 +7,7 @@ function App() {
         <React.StrictMode>
           <RouteSwicth/>
         </React.StrictMode>
-        <Footer/>
+        
     </div>
   );
 }

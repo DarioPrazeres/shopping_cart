@@ -8,9 +8,9 @@ const Services = (props)=>{
     const blackStyle = props.blackStyle;
     const posX = [];
     const posY = [];
+    const cart = [];
     function showDatta(vectorIndex, index){
         var n = 0;
-        console.log(`${vectorIndex} and ${index}`);
         if(vectorIndex === 0){
             if(posX.length === 0){
                 posX.push(index);
@@ -22,14 +22,32 @@ const Services = (props)=>{
                         console.log(n)
                         if(n === posX.length){
                             posX.push(index);
+                            props.upDateProd(props.colections[0][posX[i]]);
+                            cart.push(props.colections[0][posX[i]]);
                         }
                     }
                 }                
             console.log(posX);
         }else{
-            
+            if(posY.length === 0){
+                posY.push(index);
+            }
+                for(let i=0; i<posY.length; i++){
+                    console.log(i)
+                    if(posY[i] !== index){
+                        n++;
+                        console.log(n)
+                        if(n === posY.length){
+                            posY.push(index);
+                            props.upDateProd(props.colections[1][posY[i]]);
+                            cart.push(props.colections[1][posY[i]]);
+                        }
+                    }
+                }                
+            console.log(posY);
         }
-        //props.upDateProd(allProducts);
+        console.log(cart);
+        //props.upDateProd(cart);
     }
     return (
         <div className="dp">
@@ -43,7 +61,7 @@ const Services = (props)=>{
                         {props.colections[0].map((colection, i)=>{
                             return (
                                     <div key={i} className="p-2">
-                                        <Product  product={colection}/>
+                                        <Product  product={colection} visible="d-none"/>
                                         <button className="btn border" onClick={()=>showDatta(0, i)}>Add Cart</button>
                                     </div>
                                 );
@@ -60,7 +78,7 @@ const Services = (props)=>{
                         {props.colections[1].map((colection, c)=>{
                             return (
                                     <div key={c} className="p-2">
-                                        <Product  product={colection}/>
+                                        <Product  product={colection} visible="d-none"/>
                                         <button className="btn border" onClick={()=>showDatta(1, c)}>Add Cart</button>
                                     </div>
                                 );

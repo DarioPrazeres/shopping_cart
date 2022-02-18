@@ -59,7 +59,7 @@ footer{
    gap: 1%;
 }
 .cl{
-    height: 700px;
+    height: auto;
 }
 .gridShow{
    display: grid;
