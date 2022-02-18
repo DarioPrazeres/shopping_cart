@@ -15,10 +15,6 @@ const RouteSwicth = () =>{
     }
     const upDateCart = (datta) =>{  
         dario.push(datta);
-        console.log(dario);      
-        console.log(datta); 
-    }
-    const upDateQtd = (childDatta, index) =>{ 
     }
     useEffect(()=>{}, [dario]);
     return (

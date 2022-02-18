@@ -2,9 +2,6 @@ import React, {useState, useEffect} from "react";
 import "../css/menu.css";
 function Product(props){
     const [count, setCount] = useState(1);
-    const upDateArray=(index)=>{
-        console.log(index)
-    }
     useEffect(()=>{
         console.log(count);
     }, [count]);
