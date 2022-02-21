@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "/shopping_cart/static/css/main.e6c13ad2.css",
-    "main.js": "/shopping_cart/static/js/main.563ddb6a.js",
+    "main.css": "/shopping_cart/static/css/main.320f9a7a.css",
+    "main.js": "/shopping_cart/static/js/main.11d020b7.js",
+    "static/media/blackStyle.jpg": "/shopping_cart/static/media/blackStyle.bc614eea2f007ef3479b.jpg",
+    "static/media/fashion-designer-01.jpg": "/shopping_cart/static/media/fashion-designer-01.a2fec328d03b1b00bc9b.jpg",
+    "static/media/redDress.jpg": "/shopping_cart/static/media/redDress.9bc34daff3461549bd75.jpg",
+    "static/media/blue.jpg": "/shopping_cart/static/media/blue.12561fef7fa8bfbd891f.jpg",
+    "static/media/golden.jpg": "/shopping_cart/static/media/golden.90691c0d36dd70036d90.jpg",
+    "static/media/shoe-2.jpg": "/shopping_cart/static/media/shoe-2.ab7857b84ee18a2179db.jpg",
+    "static/media/site-logo.svg": "/shopping_cart/static/media/site-logo.259bcd7d46436fd8691331f6e94da70e.svg",
     "index.html": "/shopping_cart/index.html",
-    "main.e6c13ad2.css.map": "/shopping_cart/static/css/main.e6c13ad2.css.map",
-    "main.563ddb6a.js.map": "/shopping_cart/static/js/main.563ddb6a.js.map"
+    "main.320f9a7a.css.map": "/shopping_cart/static/css/main.320f9a7a.css.map",
+    "main.11d020b7.js.map": "/shopping_cart/static/js/main.11d020b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.563ddb6a.js"
+    "static/css/main.320f9a7a.css",
+    "static/js/main.11d020b7.js"
   ]
 }
