@@ -58,13 +58,10 @@ footer{
    grid-template-columns: 50% 50%;
    gap: 1%;
 }
-.cl{
-    height: auto;
-}
 .gridShow{
    display: grid;
    grid-template-columns: 30% 30% 30%;
-   grid-template-rows: 280px;
+   grid-template-rows: 300px;
    gap: 5px;
 }
 
@@ -81,4 +78,8 @@ footer{
         grid-template-columns: 100%;
         flex-wrap: wrap-reverse;
     }
+    .gridShow{
+        grid-template-rows: 300px;
+        gap: 15px;
+     }
 }

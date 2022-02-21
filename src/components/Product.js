@@ -1,9 +1,15 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, memo} from "react";
 import "../css/menu.css";
 function Product(props){
     const [count, setCount] = useState(1);
+    const sendIndex = (i) =>{
+        if(count <= 1){
+            props.show(i);
+        }
+        
+    }
     useEffect(()=>{
-        console.log(count);
+        //console.log(count);
     }, [count]);
     return (
         <div className="product " key={props.product.id}>
@@ -13,12 +19,12 @@ function Product(props){
             <div className={props.visible}>
                 <h6>Total: {Number(count * props.product.price).toFixed(2)}</h6>
                 <div className="d-flex justify-content-center mb-1 show">
-                    <button onClick={()=>{setCount((c)=> c-1); props.product.qtd ++;}} className="btn border">-</button>
+                    <button onClick={()=>{setCount((c)=> c-1); sendIndex(props.index);}} className="btn border">-</button>
                     <h6 className="p-2">{count}</h6>
-                    <button onClick={()=>setCount((c)=> c+1)} className="btn border">+</button>
+                    <button onClick={()=>{setCount((c)=> c+1);sendIndex(props.index);}} className="btn border">+</button>
                 </div>
             </div>
         </div>
     );
 }
-export default Product;
+export default memo(Product);
