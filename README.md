@@ -1,6 +1,6 @@
 # shopping_cart
 <h1 align="center">Shopping Cart</h1>
-<p>The Shopping Cart project is about a cart in store when you selected something and you can see where the itens you choose.This project was build with React, JavaScript, Css (Bootstrap). This exercise make part of The Odin Project curriculium!</p>
+
 
 <img src='https://img.shields.io/github/issues/DarioPrazeres/shopping_cart'> <img src='https://img.shields.io/github/forks/DarioPrazeres/shopping_cart'> <img src='https://img.shields.io/github/stars/DarioPrazeres/shopping_cart'> <img src='https://img.shields.io/github/license/DarioPrazeres/shopping_cart'>
 
@@ -38,8 +38,7 @@
 
 ## Overview
 
-<p>It's a ideia about to-do list very simple and many practice to use. And this project help me to develop my skill in localStorage and JSON.</p>
-
+<p>The Shopping Cart project is about a cart in store when you selected something and you can see where the itens you choose.This project was build with React, JavaScript, Css (Bootstrap). This exercise make part of The Odin Project curriculium!</p>
 
 ### Built With
 
